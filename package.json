@@ -1,0 +1,49 @@
+{
+  "name": "speccraft",
+  "version": "0.1.0",
+  "description": "Spec-driven development for AI coding assistants",
+  "type": "module",
+  "private": true,
+  "workspaces": {
+    "packages": ["packages/*"],
+    "catalog": {
+      "typescript": "^5.7.0",
+      "@types/bun": "latest"
+    }
+  },
+  "scripts": {
+    "build:cli": "bun build --compile ./packages/cli/bin/speccraft.ts --outfile speccraft",
+    "build:cli:all": "bun run build:cli && bun run build:cli:linux && bun run build:cli:windows",
+    "build:cli:linux": "bun build --compile --target=bun-linux-x64 ./packages/cli/bin/speccraft.ts --outfile speccraft-linux",
+    "build:cli:windows": "bun build --compile --target=bun-windows-x64 ./packages/cli/bin/speccraft.ts --outfile speccraft-windows",
+    "publish:core": "cd packages/core && bun publish",
+    "publish:cli": "cd packages/cli && bun publish",
+    "test": "bun test --workspaces",
+    "test:core": "bun test --filter @speccraft/core",
+    "test:cli": "bun test --filter @speccraft/cli",
+    "dev:cli": "bun --watch ./packages/cli/bin/speccraft.ts",
+    "lint": "echo 'Linting not configured yet'",
+    "version:patch": "bun run version patch",
+    "version:minor": "bun run version minor",
+    "version:major": "bun run version major"
+  },
+  "devDependencies": {
+    "typescript": "catalog:"
+  },
+  "engines": {
+    "bun": ">=1.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iAziz786/speccraft.git"
+  },
+  "keywords": [
+    "spec-driven-development",
+    "ai",
+    "cli",
+    "spec",
+    "documentation"
+  ],
+  "license": "MIT",
+  "author": "Aziz <heyaziz@heyaziz.dev>"
+}

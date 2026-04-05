@@ -1,0 +1,46 @@
+{
+  "name": "@speccraft/cli",
+  "version": "0.1.0",
+  "description": "CLI tool for SpecCraft - Spec-driven development",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "speccraft": "./bin/speccraft.js"
+  },
+  "files": [
+    "dist/",
+    "bin/",
+    "src/",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "bun test",
+    "prepublishOnly": "bun run build"
+  },
+  "dependencies": {
+    "@speccraft/core": "workspace:*",
+    "commander": "^12.0.0"
+  },
+  "devDependencies": {
+    "typescript": "catalog:",
+    "@types/bun": "catalog:"
+  },
+  "engines": {
+    "bun": ">=1.2.0"
+  },
+  "keywords": [
+    "spec-driven-development",
+    "cli",
+    "spec",
+    "sdd",
+    "ai"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iAziz786/speccraft.git",
+    "directory": "packages/cli"
+  }
+}

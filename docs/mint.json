@@ -1,0 +1,83 @@
+{
+  "name": "SpecVibe",
+  "logo": {
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
+  },
+  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#667eea",
+    "light": "#94a3b8",
+    "dark": "#1e293b",
+    "anchors": {
+      "from": "#667eea",
+      "to": "#764ba2"
+    }
+  },
+  "topbarLinks": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/iAziz786/specvibe"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Get Started",
+    "url": "https://www.npmjs.com/package/@specvibe/cli"
+  },
+  "tabs": [
+    {
+      "name": "Documentation",
+      "url": "introduction"
+    },
+    {
+      "name": "API Reference",
+      "url": "api-reference"
+    },
+    {
+      "name": "Changelog",
+      "url": "changelog"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": [
+        "introduction",
+        "quickstart",
+        "installation"
+      ]
+    },
+    {
+      "group": "Core Concepts",
+      "pages": [
+        "concepts/spec-driven-development",
+        "concepts/workflow",
+        "concepts/structure"
+      ]
+    },
+    {
+      "group": "CLI Reference",
+      "pages": [
+        "cli/commands",
+        "cli/init",
+        "cli/propose",
+        "cli/design",
+        "cli/tasks",
+        "cli/list",
+        "cli/archive"
+      ]
+    },
+    {
+      "group": "Advanced",
+      "pages": [
+        "advanced/configuration",
+        "advanced/templates",
+        "advanced/integrations"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "github": "https://github.com/iAziz786/specvibe",
+    "twitter": "https://twitter.com/heyaziz"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "name": "@speccraft/core",
+  "version": "0.1.0",
+  "description": "Core library for SpecCraft - Spec-driven development",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./types": {
+      "import": "./dist/types.js",
+      "types": "./dist/types.d.ts"
+    },
+    "./parser": {
+      "import": "./dist/parser.js",
+      "types": "./dist/parser.d.ts"
+    },
+    "./templates": {
+      "import": "./dist/templates.js",
+      "types": "./dist/templates.d.ts"
+    }
+  },
+  "files": [
+    "dist/",
+    "src/",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "bun test",
+    "prepublishOnly": "bun run build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "catalog:",
+    "@types/bun": "catalog:"
+  },
+  "peerDependencies": {},
+  "engines": {
+    "bun": ">=1.2.0"
+  },
+  "keywords": [
+    "spec-driven-development",
+    "spec",
+    "sdd",
+    "ai"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iAziz786/speccraft.git",
+    "directory": "packages/core"
+  }
+}

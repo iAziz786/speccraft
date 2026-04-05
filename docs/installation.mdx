@@ -1,0 +1,117 @@
+# Installation
+
+Install SpecVibe CLI to start using spec-driven development.
+
+## Requirements
+
+- **Bun** 1.2.0 or later ([Install Bun](https://bun.sh/docs/installation))
+- **Node.js** 20.19.0 or later (alternative runtime)
+
+## Global Installation
+
+Install SpecVibe CLI globally using Bun:
+
+```bash
+bun install -g @specvibe/cli
+```
+
+Verify installation:
+
+```bash
+specvibe --version
+```
+
+## Project Installation
+
+Add SpecVibe to a specific project:
+
+```bash
+bun add -D @specvibe/cli
+```
+
+Then use via package scripts:
+
+```json
+{
+  "scripts": {
+    "spec:init": "specvibe init",
+    "spec:propose": "specvibe propose"
+  }
+}
+```
+
+## Using npx (No Installation)
+
+Run SpecVibe without installing:
+
+```bash
+bunx @specvibe/cli <command>
+```
+
+Examples:
+```bash
+bunx @specvibe/cli init
+bunx @specvibe/cli propose my-feature
+```
+
+## Building from Source
+
+Clone the repository:
+
+```bash
+git clone https://github.com/iAziz786/specvibe.git
+cd specvibe
+```
+
+Install dependencies:
+
+```bash
+bun install
+```
+
+Build the CLI:
+
+```bash
+bun run build:cli
+```
+
+This creates a standalone `specvibe` binary in the project root.
+
+## Cross-Platform Builds
+
+Build for multiple platforms:
+
+```bash
+# macOS (current platform)
+bun run build:cli
+
+# Linux
+bun run build:cli:linux
+
+# Windows
+bun run build:cli:windows
+```
+
+## Shell Completion
+
+Add shell completion for easier usage:
+
+### Bash
+```bash
+specvibe completion bash >> ~/.bashrc
+```
+
+### Zsh
+```bash
+specvibe completion zsh >> ~/.zshrc
+```
+
+### Fish
+```bash
+specvibe completion fish > ~/.config/fish/completions/specvibe.fish
+```
+
+## Next Steps
+
+- [Quick Start](/quickstart) — Create your first spec
+- [CLI Commands](/cli/commands) — Learn all available commands

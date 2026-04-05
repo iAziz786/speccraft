@@ -1,0 +1,150 @@
+# Quick Start
+
+Get SpecVibe running in your project in under 5 minutes.
+
+## Prerequisites
+
+- [Bun](https://bun.sh) 1.2.0 or later
+
+## Installation
+
+### Install the CLI globally
+
+```bash
+bun install -g @specvibe/cli
+```
+
+### Or use with npx
+
+```bash
+bunx @specvibe/cli <command>
+```
+
+## Initialize Your Project
+
+Navigate to your project directory and initialize SpecVibe:
+
+```bash
+cd your-project
+specvibe init
+```
+
+This creates:
+- A `specs/` directory for your specifications
+- A `specvibe.json` configuration file
+
+## Create Your First Spec
+
+Let's create a spec for adding dark mode to your application:
+
+```bash
+specvibe propose add-dark-mode --description "Add dark mode toggle to the UI"
+```
+
+This creates:
+```
+specs/
+└── add-dark-mode/
+    └── spec.md
+```
+
+The `spec.md` contains:
+```markdown
+# add-dark-mode
+
+## Overview
+
+Add dark mode toggle to the UI
+
+## Status
+
+**Status:** draft
+
+## Requirements
+
+## Design
+
+## Tasks
+
+## Notes
+```
+
+## Add Requirements
+
+Edit `specs/add-dark-mode/spec.md` and add requirements:
+
+```markdown
+## Requirements
+
+- Must have toggle button in header
+- Should persist preference to localStorage
+- Could support system preference detection
+```
+
+## Add Technical Design
+
+Generate a design document:
+
+```bash
+specvibe design add-dark-mode
+```
+
+This creates `specs/add-dark-mode/design.md` with:
+- Architecture overview
+- Technical details
+- API changes
+- Data model
+- Security considerations
+- Testing plan
+
+## Generate Tasks
+
+Create an implementation checklist:
+
+```bash
+specvibe tasks add-dark-mode
+```
+
+This creates `specs/add-dark-mode/tasks.md` with:
+```markdown
+# Tasks: add-dark-mode
+
+## Implementation Checklist
+
+### General
+
+- [ ] Review spec requirements
+- [ ] Implement core functionality
+- [ ] Write tests
+- [ ] Update documentation
+```
+
+## View Your Spec
+
+Check the status of your specs:
+
+```bash
+specvibe list
+```
+
+Show details of a specific spec:
+
+```bash
+specvibe show add-dark-mode
+```
+
+## Archive When Done
+
+Once the feature is complete:
+
+```bash
+specvibe archive add-dark-mode
+```
+
+This moves the spec to `specs/archive/add-dark-mode/`.
+
+## Next Steps
+
+- Learn about the [workflow](/concepts/workflow)
+- Explore [CLI commands](/cli/commands)
+- Configure [advanced options](/advanced/configuration)
